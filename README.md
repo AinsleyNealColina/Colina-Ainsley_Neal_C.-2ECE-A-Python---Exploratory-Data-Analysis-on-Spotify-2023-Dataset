@@ -41,4 +41,20 @@ To see noticeable pattern over time we once again need to visualize it using a h
 ## Examine the correlation between streams and musical attributes like bpm, danceability_%, and energy_%. Which attributes seem to influence streams the most?
 
 To examine the correlation between streams and musical attributes like bpm, danceability_%, and energy_%.
-we need to visualize it for better understanding
+we need to visualize it for better understanding.First we once again need to convert it to integers to avoid errors,next step we need to convert it, then we need to select the streams,bpm,danceability,and energy because that is what we need to find, and we need to use matplotlib and seaborn for the heatmap to visualize the correlation matrix,and we need to identify the attributes with the highest correlation with streams, then print for the result.
+
+## Is there a correlation between danceability_% and energy_%? How about valence_% and acousticness_%?
+
+To find the correlation we need the function plt and sns for better visualization and understanding, the visualization we use is scatter plot.If the correlation coefficient is close to 1, it indicates a strong positive correlation, meaning that as danceability increases, energy tends to increase as well.If the coefficient is close to -1, it indicates a strong negative correlation, meaning that as danceability increases, energy tends to decrease.A coefficient close to 0 suggests little to no correlation between the two variables.
+
+## How do the numbers of tracks in spotify_playlists, spotify_charts, and apple_playlists compare? Which platform seems to favor the most popular tracks?
+
+To do this we need to convert first to numeric with pd.to_numeric(),second Fill Missing Values for Binary Columns.3rd track the count of the spotify_playlists, spotify_charts, and apple_playlists.4th create a bar plot for visualization.Then last add a print function calculating the number of tracks in spotify_playlists, spotify_charts, and apple_playlists for specific values
+
+## Based on the streams data, can you identify any patterns among tracks with the same key or mode (Major vs. Minor)?
+
+First we need to convert first to numeric with pd.to_numeric().Second we need to group the key mode using the df.groupby.Then lastly we need to use seaborn and matplotlib for visualization of the barplot.For better understanding and visualization(Yes, the average stream most likely wants the key with a major rather than a minor. The major has 8/11 more average streams than a minor with 3/11 average streams).
+
+## Do certain genres or artists consistently appear in more playlists or charts? Perform an analysis to compare the most frequently appearing artists in playlists or charts.
+
+To do this 1st we need to calculate the playlist counts and chart counts,2nd rename the columns for clarity.3rd we need to merge the dataframes the two DataFrames on the artist name, using an outer join to ensure all artists are included even if they don’t appear in either playlists or charts, and fills any resulting NaN values with 0. 4th Converting the count to integers: then it converts the playlist_count and chart_count columns to integer type for consistent formatting.Lastly sorting and displaying the top 10, it sorts the summary DataFrame by playlist and chart counts in descending order to prioritize artists with the most appearances and displays the top 10 artists by these counts.
