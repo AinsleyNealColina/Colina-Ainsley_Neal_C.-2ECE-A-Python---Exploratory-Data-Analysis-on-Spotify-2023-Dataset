@@ -47,7 +47,7 @@ we need to visualize it for better understanding.First we once again need to con
 
 To find the correlation we need the function plt and sns for better visualization and understanding, the visualization we use is scatter plot.If the correlation coefficient is close to 1, it indicates a strong positive correlation, meaning that as danceability increases, energy tends to increase as well.If the coefficient is close to -1, it indicates a strong negative correlation, meaning that as danceability increases, energy tends to decrease.A coefficient close to 0 suggests little to no correlation between the two variables.
 
-## How do the numbers of tracks in spotify_playlists, spotify_charts, and apple_playlists compare? Which platform seems to favor the most popular tracks?
+## How do the numbers of tracks in spotify_playlists, deezer_playlist, and apple_playlists compare? Which platform seems to favor the most popular tracks?
 
 To do this we need to convert first to numeric with pd.to_numeric(),second Fill Missing Values for Binary Columns.3rd track the count of the spotify_playlists, spotify_charts, and apple_playlists.4th create a bar plot for visualization.Then last add a print function calculating the number of tracks in spotify_playlists, spotify_charts, and apple_playlists for specific values
 
